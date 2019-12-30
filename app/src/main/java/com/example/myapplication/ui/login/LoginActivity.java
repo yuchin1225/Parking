@@ -3,17 +3,21 @@ package com.example.myapplication.ui.login;
 import android.Manifest;
 import android.app.Activity;
 
+import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.PersistableBundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -43,6 +47,28 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         initView();
+        getlocation();
+        chicknet();
+    }
+
+    private void getlocation(){
+            if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED)
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
+                return;
+    }
+
+    private void chicknet(){
+        ConnectivityManager CM = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo wifi = CM.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+        NetworkInfo gprs = CM.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+            if (wifi != null && wifi.getState() == NetworkInfo.State.CONNECTED) {
+                Toast.makeText(getApplicationContext(), "WIFI", Toast.LENGTH_LONG).show();
+            } else if (gprs != null && gprs.getState() == NetworkInfo.State.CONNECTED) {
+                Toast.makeText(getApplicationContext(), "GPRS", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "NONE", Toast.LENGTH_LONG).show();
+            }
     }
 
 
