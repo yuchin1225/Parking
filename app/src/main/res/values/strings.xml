@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">停車場</string>
+    <!-- Strings related to login -->
+    <string name="prompt_ph">手機號碼</string>
+    <string name="prompt_car">車號</string>
+    <string name="action_sign_in">登入</string>
+    <string name="action_any_sign_in">訪客登入</string>
+    <string name="text">或</string>
+    <string name="action_sign_in_short">登入</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_phone">手機格式錯誤!!</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- ServicceActivity -->
+    <string name="title_activity_service">ServiceActivity</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_dashboard">Dashboard</string>
+    <string name="navigation_coupon">優惠</string>
+    <string name="navigation_vip">會員</string>
+    <string name="reg_vip">加入會員</string>
+    <string name="reset">清空</string>
+    <string name="navigation_map">地圖</string>
+    <string name="title_activity_maps">Map</string>
+    <!-- MemberFragment -->
+    <string name="reg">加入會員</string>
+    <string name="reg_1">下一步</string>
+    <string name="vip_login">登入會員</string>
+    <!-- MemberFragment_vip -->
+    <string name="member_login">登入</string>
+</resources>
