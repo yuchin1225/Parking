@@ -25,8 +25,8 @@ import java.io.IOException;
 public class QrCodeActivity extends Activity {
     SurfaceView qrView;
     TextView textView;
-    CameraSource cameraSource;
-    BarcodeDetector barcodeDetector;
+    CameraSource cameraSource; //相機
+    BarcodeDetector barcodeDetector; //QRCode
 
 
     @Override
@@ -40,8 +40,10 @@ public class QrCodeActivity extends Activity {
         qrView = findViewById(R.id.qrView);
         textView = findViewById(R.id.textView);
         barcodeDetector = new BarcodeDetector.Builder(this).setBarcodeFormats(Barcode.QR_CODE).build();
-        cameraSource = new CameraSource.Builder(this,barcodeDetector).setRequestedPreviewSize(250,250).build();
-        cameraSource = new CameraSource.Builder(this,barcodeDetector).setAutoFocusEnabled(true).build();
+        cameraSource = new CameraSource.Builder(this,barcodeDetector)
+                .setRequestedPreviewSize(300,300)
+                .setAutoFocusEnabled(true) //自動對焦
+                .build();
         initdata();
     }
 
@@ -49,6 +51,7 @@ public class QrCodeActivity extends Activity {
         qrView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
+                //確認相機權限
                 if(ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED)
                     return;

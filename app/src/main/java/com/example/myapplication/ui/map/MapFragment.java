@@ -25,7 +25,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
  */
 public class MapFragment extends Fragment {
 
-    Fragment map;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -41,17 +40,16 @@ public class MapFragment extends Fragment {
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
             public void onMapReady(GoogleMap googleMap) {
-                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-                googleMap.clear();
-                CameraPosition GooglePlex = CameraPosition.builder().target(new LatLng(22.6034985,120.276629))
-                        .zoom(10).bearing(0).tilt(90).build();
-                googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(GooglePlex) ,10,null);
-                googleMap.getUiSettings().setZoomControlsEnabled(true);
-                googleMap.getUiSettings().setMyLocationButtonEnabled(true);
-                googleMap.addMarker(new MarkerOptions()
-                        .position(new LatLng(22.612385,120.3081431))
-                        .title("新詠科技-高雄")
-                        .snippet("His Talent : Plenty of money"));
+                    googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                    googleMap.clear();
+                    CameraPosition GooglePlex = CameraPosition.builder().target(new LatLng(22.6034985,120.276629))
+                            .zoom(10).bearing(0).tilt(90).build();
+                    googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(GooglePlex) ,10,null);
+                    googleMap.setMyLocationEnabled(true);
+                    googleMap.addMarker(new MarkerOptions()
+                            .position(new LatLng(22.612385,120.3081431))
+                            .title("新詠科技-高雄")
+                            .snippet("His Talent : Plenty of money"));
             }
         });
     }

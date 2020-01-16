@@ -15,7 +15,7 @@
         android:contentDescription="@string/app_name"
         android:scaleType="center" />
 
-    <EditText
+    <TextView
         android:id="@+id/reg_ph_chick"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -24,7 +24,9 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
-        android:inputType="phone" />
+        android:text="TextView"
+        android:textSize="24sp" />
+
 
     <EditText
         android:id="@+id/chick_phcode"
