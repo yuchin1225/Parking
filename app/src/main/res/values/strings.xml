@@ -1,30 +1,106 @@
 <resources>
-    <string name="app_name">停車場</string>
+    <string name="app_name">新詠科技</string>
+
     <!-- Strings related to login -->
     <string name="prompt_ph">手機號碼</string>
-    <string name="prompt_car">車號</string>
-    <string name="action_sign_in">登入</string>
+    <string name="prompt_pass">密碼</string>
+    <string name="action_sign_in">會員登入</string>
     <string name="action_any_sign_in">訪客登入</string>
-    <string name="text">或</string>
-    <string name="action_sign_in_short">登入</string>
-    <string name="welcome">"Welcome !"</string>
+    <string name="action_sign_in_short">會員登入</string>
     <string name="invalid_phone">手機格式錯誤!!</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
     <!-- ServicceActivity -->
     <string name="title_activity_service">ServiceActivity</string>
-    <string name="navigation_home">Home</string>
-    <string name="navigation_dashboard">Dashboard</string>
-    <string name="navigation_coupon">優惠</string>
-    <string name="navigation_vip">會員</string>
+    <string name="navigation_home">車號查詢</string>
+    <string name="navigation_dashboard">查詢明細</string>
+    <string name="navigation_coupon">優惠專區</string>
+    <string name="navigation_vip">會員專區</string>
     <string name="reg_vip">加入會員</string>
     <string name="reset">清空</string>
-    <string name="navigation_map">地圖</string>
+    <string name="navigation_map">服務據點</string>
     <string name="title_activity_maps">Map</string>
-    <!-- MemberFragment -->
+
+    <!-- CarplateFragment -->
+    <string name="search_car">查詢</string>
+    <string name="edit_car">輸入車號</string>
+
+    <!-- FeeFragment -->
+    <string name="search_fee">查詢</string>
+    <string name="edit_fee">輸入車號</string>
+
+    <!-- AnonymousFragment -->
+    <string name="next">下一步</string>
+    <string name="reg_result">完成</string>
     <string name="reg">加入會員</string>
-    <string name="reg_1">下一步</string>
-    <string name="vip_login">登入會員</string>
+    <string name="login">會員登入</string>
+
+    <!-- MemberFragment -->
+    <string name="userdata">會員資料</string>
+    <string name="visa">信用卡</string>
+
+    <!-- Reg -->
+    <string name="reg_ph">輸入手機號碼</string>
+    <string name="check">發送</string>
+    <string name="check_code">輸入簡訊驗證碼</string>
+    <string name="passwd">輸入密碼</string>
+    <string name="ck_passwd">確認密碼</string>
+    <string name="name">姓名/暱稱</string>
+
+    <!-- AdminFragment -->
+    <!-- Passuser -->
+    <string name="passuserdata">月租資料</string>
+    <string name="show_passuserdata">列出</string>
+    <string name="edit_passuserdata">修改</string>
+    <string name="del_passuserdata">刪除</string>
+    <string name="passuser">姓名</string>
+    <string name="passaddr">住址</string>
+    <string name="passcompany">公司</string>
+    <string name="passjob">職稱</string>
+    <string name="passbranch">部門</string>
+    <string name="isuse">月租狀態</string>
+    <string name="isuse_on">啟用</string>
+    <string name="isuse_off">停用</string>
+    <string name="passstart">啟用時間</string>
+    <string name="passend">結束時間</string>
+    <string name="passselect">選擇</string>
+    <string name="timezone">月租時段</string>
+    <string name="timezone_all">全天</string>
+    <string name="timezone_sum">日間</string>
+    <string name="timezone_night">夜間</string>
+
+    <!-- CarplateEditActivity -->
+    <string name="admin_carplate">查詢及修改車號</string>
+    <string name="fixplate">車號狀態：</string>
+    <string name="fix_0">無修改</string>
+    <string name="fix_1">修改後</string>
+    <string name="timego">起始時間</string>
+    <string name="timeout">結束時間</string>
+
+
+    <string name="carplate_cancel">取消</string>
+    <string name="carplate_update">更新</string>
+    <string name="txt_membercode">當前折扣：</string>
+    <string name="txt_datetime">入場時間：</string>
+    <string name="txt_paytime">付費時間：</string>
+    <string name="txt_lefttime">離場時間：</string>
+    <string name="txt_membercode_type">折扣類別：</string>
+    <string name="txt_memberdis">折扣值：</string>
+    <string name="txt_Amount">已繳金額：</string>
+
+
+
+
+
     <!-- MemberFragment_vip -->
     <string name="member_login">登入</string>
+
+    <!-- visa -->
+    <string name="visa_date">有效日期：</string>
+    <string name="visa_month">月</string>
+    <string name="visa_year">年</string>
+    <string name="visa_check">驗證碼：</string>
+    <string name="visa_new">新增</string>
+    <string name="visa_cancel">取消</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD86rqPy-hibUJpDtXQjpshICzhY4YFmPM</string>
 </resources>

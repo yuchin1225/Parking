@@ -1,13 +1,64 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/background</item>
+    </style>
+    
+    <style name="LaunchTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/shape_launch</item>
+    </style>
+
+    <style name="dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_shape</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/SetDialogAnimation</item>
+    </style>
+
+    <style name="nav_design" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@drawable/btn_ripple</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_shape</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/TransDialogAnimation</item>
+    </style>
+
+    <style name="MyAlertDialogTheme1" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_shape</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/SetDialogAnimation</item>
+    </style>
+
+    <style name="date_picker_theme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/green</item>
+        <item name="colorControlActivated">@android:color/holo_blue_light</item>
+        <item name="colorPrimary">@android:color/black</item>
     </style>
 
 
+    <style name="TransDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
+
+    <style name="FadeDialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="SetDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/set</item>
+        <item name="android:windowExitAnimation">@anim/set_out</item>
+    </style>
 </resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/reg_ph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxLength="10"
+            android:ems="10"
+            android:hint="@string/reg_ph"
+            android:padding="4dp"
+            android:background="@drawable/edittext"
+            android:inputType="phone"
+            android:selectAllOnFocus="true"/>
+
+        <Button
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/reg_ph"
+            android:layout_alignBottom="@id/reg_ph"
+            android:layout_alignRight="@id/reg_ph"
+            android:gravity="center"
+            android:background="@drawable/btn_ripple"
+            android:text="@string/check"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/check_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxLength="10"
+        android:ems="10"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        android:hint="@string/check_code"
+        android:background="@drawable/edittext"
+        android:inputType="number" />
+
+    <Button
+            android:id="@+id/reg_next_page"
+            android:layout_width="96dp"
+            android:layout_height="32dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/btn_ripple"
+            android:text="@string/next"/>
+</LinearLayout>
+
+

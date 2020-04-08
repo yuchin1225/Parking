@@ -1,24 +1,56 @@
 apply plugin: 'com.android.application'
 apply plugin: 'save.state'
 
+def releaseTime() {
+    return new Date().format("MMdd", TimeZone.getTimeZone("UTC"))
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "29525132"
+            keyAlias "key"
+            keyPassword "29525132"
+        }
+    }
+    android.applicationVariants.all { variant->
+        variant.outputs.all{
+            if(outputFileName.endsWith('.apk')){
+                if("debug".equalsIgnoreCase(variant.buildType.name)){
+                    outputFileName = "ShinYoun_" + defaultConfig.versionName+ "_"+ releaseTime() +"_debug.apk"
+                }else if("release".equalsIgnoreCase(variant.buildType.name)){
+                    outputFileName = "ShinYoun_" + defaultConfig.versionName+ "_"+ releaseTime() + "_release.apk"
+                }
+            }
+        }
+    }
     defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdkVersion 14
+        applicationId 'com.parking.ShinYoun'
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+
     buildTypes {
         release {
-            minifyEnabled false
+            // 不顯示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign優化
+            zipAlignEnabled true
+            // 移除無用的resource檔案
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     dataBinding {
         enabled = true
     }
@@ -43,4 +75,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-vision:19.0.0'
     implementation 'com.google.android.gms:auth-api-impl:11.6.0'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+    implementation "androidx.versionedparcelable:versionedparcelable:1.1.0"
+    implementation 'com.google.android.gms:play-services-ads:19.0.1'
+    implementation 'com.journeyapps:zxing-android-embedded:3.5.0'
 }

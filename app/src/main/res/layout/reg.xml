@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="username"
+        android:background="@null"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:ems="10"
+        android:hint="@string/passwd"
+        android:password="true"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:background="@drawable/edittext"/>
+
+    <EditText
+        android:id="@+id/ck_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:ems="10"
+        android:hint="@string/ck_passwd"
+        android:password="true"
+        android:inputType="text"
+        android:paddingTop="5dp"
+        android:background="@drawable/edittext"/>
+
+    <Button
+        android:id="@+id/reg_end"
+        android:layout_width="96dp"
+        android:layout_height="32dp"
+        android:layout_gravity="right"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/reg_result"
+        android:background="@drawable/btn_ripple"/>
+</LinearLayout>
+
+
